@@ -1,4 +1,4 @@
-describe('visit mizan bandung',()=>{
+describe('visit mizan',()=>{
     it('mizan is available',()=>{
         cy.visit('https://seller.mizanmu.id/')
         cy.get('.account-login > [href="https://seller.mizanmu.id/login"]').scrollIntoView().click({force: true})
