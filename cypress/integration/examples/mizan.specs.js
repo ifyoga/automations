@@ -11,4 +11,13 @@ describe('visit mizan',()=>{
         cy.wait(1000)
         cy.get('.visible-md > .image').click()
     })
+
+    it('error mizan login',()=>{
+        cy.visit('https://seller.mizanmu.id/')
+        cy.get('.account-login > [href="https://seller.mizanmu.id/login"]').scrollIntoView().click({force: true})
+        cy.get('[type="email"]').type('ifyoga@qmail.id')
+        cy.get('#pass').type('aduh')
+        cy.get('.btn').should('contain','Login').click()
+       
+    })
 })
