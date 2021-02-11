@@ -6,6 +6,7 @@ describe('visit mizan',()=>{
         cy.get('#pass').type('haduh')
         cy.get('.btn').should('contain','Login').click()
         cy.get('#produk_name').type('asbunayah')
+        cy.wait(1000)
         cy.get('.submit-form > .radius').click()
     })
 })
