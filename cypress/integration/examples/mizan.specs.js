@@ -6,9 +6,9 @@ describe('visit mizan',()=>{
         cy.get('[type="email"]').type('ifyoga@qmail.id')
         cy.get('#pass').type('aduh')
         cy.get('.btn').should('contain','Login').click()
-       
+        cy.wait(4000)
     })
-    cy.wait(4000)
+   
     it('Green action',()=>{
         cy.visit('https://seller.mizanmu.id/')
         cy.get('.account-login > [href="https://seller.mizanmu.id/login"]').scrollIntoView().click({force: true})
