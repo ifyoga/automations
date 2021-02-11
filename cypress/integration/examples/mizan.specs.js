@@ -5,5 +5,7 @@ describe('visit mizan',()=>{
         cy.get('[type="email"]').type('ifyoga@qmail.id')
         cy.get('#pass').type('haduh')
         cy.get('.btn').should('contain','Login').click()
+        cy.get('#produk_name').type('asbunayah')
+        cy.get('.submit-form > .radius').click()
     })
 })
